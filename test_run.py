@@ -22,16 +22,16 @@ def test_rename_columns():
 
 def test_extrait_du_dataSet():
     """
-    Doc
+    Vérifier si les lignes prises égales à 50 lignes 
     """
     data =  import_data()
     data_extrait =  extrait_du_dataSet(data)
 
     assert len(data_extrait) == 50
 
-def test_multiplier_dataset():
+def test_multiplier_dataset():                                                          
     """
-    Doc
+    Verifier si les lignes sont multipliés est égal à 150 lignes 
     """
     data =  import_data()
 
