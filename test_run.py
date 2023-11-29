@@ -1,7 +1,7 @@
 """
 Tests
 """
-from run import import_data, rename_columns, extrait_du_dataSet
+from run import import_data, rename_columns, extrait_du_dataSet, multiplier_dataset
 
 def test_import_data():
     """
@@ -20,8 +20,6 @@ def test_rename_columns():
     assert "sepal_length" in data_renamed.columns
 
 
-
-
 def test_extrait_du_dataSet():
     """
     Doc
@@ -30,4 +28,12 @@ def test_extrait_du_dataSet():
     data_extrait =  extrait_du_dataSet(data)
 
     assert len(data_extrait) == 50
+
+def test_multiplier_dataset():
+    """
+    Doc
+    """
+    data =  import_data()
+
+    assert len(data) == 150
 
