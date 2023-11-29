@@ -8,7 +8,9 @@ def main():
     Main
     """
     data = import_data()
-    data = rename_columns(data)
+    rename_columns(data)
+
+    extrait_du_dataSet(data)
 
     
 def import_data() -> pd.DataFrame:
@@ -31,6 +33,18 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     
     return data_renamed
 
+
+def extrait_du_dataSet(data :pd.DataFrame)-> pd.DataFrame:
+
+    """
+    Une fonction qui retourne 50  lignes de notre dataset
+    Input : csv file as a dataframe
+    Output : data [pd.DataFrame] qui retourne les 50 lignes
+
+    """
+    data_sample = data.sample(50)
+
+    return data_sample
 
 if __name__ == '__main__':
     """
