@@ -26,6 +26,13 @@ CHAIR Roa<br>
         pd.DataFrame: Un nouveau DataFrame contenant un échantillon de 50 lignes du DataFrame d'origine.<br>
 
 <h1>Fonction multiplication 150 lignes</h1><br>  
-
+une fonction qui multiplie le nombre d'échantillons dans un DataFrame.<br>
+ 
+   INPUT<br>
+    - data (pd.DataFrame): Le DataFrame d'entrée contenant les données à multiplier.<br>
+    Output<br>
+    - pd.DataFrame: Un nouveau DataFrame avec le contenu répété trois fois. <br>
+    Description:<br>
+    Cette fonction prend un DataFrame pandas en entrée, extrait un échantillon à l'aide de la fonction `extrait_du_dataSet`,<br>
+    puis réplique cet échantillon trois fois à l'aide de la fonction `pd.concat` avec l'option `ignore_index=True`.<br>
     
-  
