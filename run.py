@@ -3,6 +3,7 @@ CI/CD
 """
 import pandas as pd
 
+
 def main():
     """
     Main
@@ -15,7 +16,7 @@ def main():
     multiplier_dataset(data)
 
     
-def import_data() -> pd.DataFrame:
+def import_data() -> pd.DataFrame :
     """
     Import csv file as a dataframe
     Output: data [pd.DataFrame]
@@ -24,23 +25,24 @@ def import_data() -> pd.DataFrame:
     print(data.shape)
     return data
 
-def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
+
+def rename_columns(data : pd.DataFrame) -> pd.DataFrame :
     """
     Input
-    - data (pd.DataFrame): Le DataFrame d'entrée avec des noms de colonnes éventuellement non standard.
+        - data (pd.DataFrame): Le DataFrame d'entrée avec des noms de colonnes éventuellement non standard.
  
     Output
-    - pd.DataFrame: Un nouveau DataFrame avec des colonnes renommées selon des noms standard.
+        - pd.DataFrame: Un nouveau DataFrame avec des colonnes renommées selon des noms standard.
  
     Description:
-    Cette fonction prend en input le dataFrame et renomme ses colonnes avec des noms standard
-    Les noms standard des colonnes sont :
-    - 'sepal_length' pour la colonne 'sepal.length'
-    - 'sepal_width' pour la colonne 'sepal.width'
-    - 'petal_length' pour la colonne 'petal.length'
-    - 'petal_width' pour la colonne 'petal.width'
+        Cette fonction prend en input le dataFrame et renomme ses colonnes avec des noms standard
+        Les noms standard des colonnes sont :
+        - 'sepal_length' pour la colonne 'sepal.length'
+        - 'sepal_width' pour la colonne 'sepal.width'
+        - 'petal_length' pour la colonne 'petal.length'
+        - 'petal_width' pour la colonne 'petal.width'
  
-    La fonction utilise la méthode `rename` de pandas pour effectuer le renommage des colonnes.
+        La fonction utilise la méthode `rename` de pandas pour effectuer le renommage des colonnes.
     """
     data_renamed = data.rename(columns={"sepal.length": 'sepal_length',
                                 "sepal.width": 'sepal_width',
@@ -50,16 +52,16 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     return data_renamed
 
 
-def extrait_du_dataSet(data :pd.DataFrame)-> pd.DataFrame:
+def extrait_du_dataSet(data : pd.DataFrame)-> pd.DataFrame :
 
     """
     Cette fonction prend en entrée un DataFrame 'data' et renvoie un nouvel échantillon
-      de 50 lignes sélectionnées de manière aléatoire à partir du DataFrame d'origine.
+    de 50 lignes sélectionnées de manière aléatoire à partir du DataFrame d'origine.
  
-       Input:
+    Input:
         data (pd.DataFrame): Le DataFrame de données à partir duquel extraire l'échantillon.
  
-       Output:
+    Output:
         pd.DataFrame: Un nouveau DataFrame contenant un échantillon de 50 lignes du DataFrame d'origine.
 
     """
@@ -68,7 +70,7 @@ def extrait_du_dataSet(data :pd.DataFrame)-> pd.DataFrame:
     return data_sample
 
 
-def multiplier_dataset(data :pd.DataFrame)-> pd.DataFrame:
+def multiplier_dataset(data : pd.DataFrame)-> pd.DataFrame :
 
     """
     une fonction qui multiplie le nombre d'échantillons dans un DataFrame.
@@ -90,6 +92,7 @@ def multiplier_dataset(data :pd.DataFrame)-> pd.DataFrame:
     data_triple = pd.concat([data_sample] * 3, ignore_index=True)
 
     return data_triple
+
 
 if __name__ == '__main__':
     """
